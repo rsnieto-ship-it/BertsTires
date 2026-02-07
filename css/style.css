@@ -723,6 +723,103 @@ h4 { font-size: 1.125rem; }
     color: var(--gray-400);
 }
 
+/* Product Cards with Images */
+.tire-card {
+    background-color: var(--white);
+    border: 2px solid var(--gray-100);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-base);
+}
+
+.tire-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+}
+
+.tire-card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background-color: var(--gray-100);
+}
+
+.tire-card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.tire-card h4 {
+    margin-bottom: 8px;
+    color: var(--gray-900);
+}
+
+.tire-card p {
+    font-size: 0.875rem;
+    color: var(--gray-500);
+}
+
+/* About page real photo */
+.about-image.has-photo {
+    background: none;
+    height: auto;
+    overflow: hidden;
+}
+
+.about-image.has-photo img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+}
+
+/* Hero with real image */
+.hero-image.has-photo {
+    max-width: 500px;
+}
+
+.hero-image.has-photo img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+}
+
+/* Gallery section */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-base);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tire-card-image {
+        height: 160px;
+    }
+}
+
 /* Contact Form */
 .contact-grid {
     display: grid;
